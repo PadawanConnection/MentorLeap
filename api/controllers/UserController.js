@@ -22,5 +22,4 @@ module.exports = {
    * (specific to UserController)
    */
   _config: {},
-
 };
