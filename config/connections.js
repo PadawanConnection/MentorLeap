@@ -81,6 +81,7 @@ module.exports.connections = {
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
   }
+  // when putting into product, remember to hide password -
 
 
   /***************************************************************************
