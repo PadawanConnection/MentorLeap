@@ -1,8 +1,8 @@
-# Sails Chat
+MentorLeap
+======================
 
-# An example application by [UpFront Wichita](http://upfrontwichita.com).
+This project was designed to link tech career changers with mentors, where they can watch live streams from mentors and chat with them. They will also be able to have video office hours with the mentor's with other career changers.
 
-## To Run
+## Chat functionality started by [UpFront Wichita](http://upfrontwichita.com). Thank you!
 
-First install node.. Then clone the source code and run an `npm install` within the directory. Then `sails lift` to run the application on port 1337.
 
