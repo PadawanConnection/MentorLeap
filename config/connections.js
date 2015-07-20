@@ -79,6 +79,7 @@ module.exports.connections = {
     host: 'localhost',
     user: 'will',
     // put your database info here
+    // acutally put it in local, this is for dev purposes tonight
     password: 'admin',      
     database: 'mentorLeap'
   }
