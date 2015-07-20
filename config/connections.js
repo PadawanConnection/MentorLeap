@@ -74,13 +74,23 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  somePostgresqlServer: {
+  localPostgresqlServer: {
     adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
+    host: 'localhost',
+    user: 'will',
+    // put your database info here
+    password: 'admin',      
+    database: 'mentorLeap'
   }
+  //  localPostgresqlServer: {   DEPLOYMENT INFO GOES HERE
+  //   adapter: 'sails-postgresql',
+  //   host: 'YOUR_POSTGRES_SERVER',
+  //   user: 'YOUR_POSTGRES_USER',
+  //   password: 'YOUR_POSTGRES_PASSWORD',
+  // use the env/production.js - and put it in .gitignore on deployment
+  //   database: 'YOUR_POSTGRES_DB'
+  // }
+
   
 
 
