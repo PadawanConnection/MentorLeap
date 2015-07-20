@@ -10,7 +10,7 @@
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
+  <meta name="google-signin-client_id" content="312172083705-q2bladt24drs2vrbdtqgnt8ecp6vfik1.apps.googleusercontent.com">
     <!--
 
       Stylesheets
@@ -34,7 +34,7 @@
       If necessary, shut down and then lift your app again.
       
     -->
-
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
 
   <body>
@@ -78,7 +78,7 @@
     <div class="container">
       <%- body %>
     </div>
-
+<div class="g-signin2" data-onsuccess="onSignIn">ddddd</div>
 
     <!--
 
@@ -103,7 +103,24 @@
     <!-- Your scripts here? -->
     <!-- Your scripts here? -->
     <!-- Your scripts here? -->
-
+    <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+<script>
+  function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+</script>
 
     <!--
 
