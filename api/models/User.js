@@ -29,7 +29,7 @@ module.exports = {
     }
 
   },
-
+  
   beforeCreate: function (values, next) {
 
     var salt = bcrypt.genSaltSync(10);
@@ -41,5 +41,10 @@ module.exports = {
     });
 
   }
+
+  // maybe needed to send the users somewhere...
+  // toJSON: function(){
+  //   var obj=this.toObject();
+  // }
 
 };
