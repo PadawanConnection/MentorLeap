@@ -33,20 +33,20 @@ module.exports.routes = {
   // 
   // (This would also work if you had a file at: `/views/home.ejs`)
   
-  '/':{
-    view: '/static/index'
-  }
+  // '/':{
+  //   view: '/static/index'
+  // }
 
   // old route block 
-  // '/': 'MainController.main',
+  '/': 'MainController.main',
 
-  // 'post /login': 'MainController.login',
+  'post /login': 'MainController.login',
 
-  // 'get /logout': 'MainController.logout',
+  'get /logout': 'MainController.logout',
 
-  // '/register': {
-  //   view: 'home/register'
-  // }
+  '/register': {
+    view: 'home/register'
+  }
 
   /*
   // But what if you want your home page to display
