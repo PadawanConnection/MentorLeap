@@ -345,6 +345,12 @@ padding-right: 10px;
   min-width: 100%;
 }
 
+ .btn-sales {
+  min-width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 200px;
+}
 
 .nav-pills>li>a {
   border-radius: 0px;
