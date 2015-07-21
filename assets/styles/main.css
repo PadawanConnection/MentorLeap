@@ -420,3 +420,13 @@ input.login.loginmodal-submit {
         left: 100%;
         margin-left: 15px;
     }
+
+    span.card-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+.white{
+  color: white;
+}
