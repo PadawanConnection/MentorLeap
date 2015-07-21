@@ -343,3 +343,16 @@ padding-right: 10px;
  .btn-fullWidth {
   min-width: 100%;
 }
+
+
+.nav-pills>li>a {
+  border-radius: 0px;
+}
+
+ul.nav.nav-pills {
+  font-size: 2rem;
+}
+
+.container .jumbotron {
+  border-radius: 0px;
+}
