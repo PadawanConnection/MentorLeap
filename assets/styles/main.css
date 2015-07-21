@@ -1,5 +1,6 @@
 body {
 /*margin-top: 70px;*/
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .jumbotron h1,
@@ -356,3 +357,66 @@ ul.nav.nav-pills {
 .container .jumbotron {
   border-radius: 0px;
 }
+
+li.mentor {
+  float: right;
+  background-color: lightgrey;
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 2px solid #353535;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.separator {
+    text-align: center;
+    height: 0.5em;
+    border-bottom: 2px solid black;
+    margin-bottom: 0.5em;
+}
+.separator:first-line {
+    background-color: white;
+}
+
+input.login.loginmodal-submit {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.loginmodal-container {
+  color: rgb(162, 162, 162);
+}
+
+
+.strike {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap; 
+    }
+
+    .strike > span {
+        position: relative;
+        display: inline-block;
+    }
+  
+    .strike > span:before,
+    .strike > span:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 2px;
+        background: rgb(162, 162, 162);
+    }
+
+    .strike > span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    .strike > span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
