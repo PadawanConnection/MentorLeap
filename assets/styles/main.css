@@ -345,6 +345,12 @@ padding-right: 10px;
   min-width: 100%;
 }
 
+ .btn-sales {
+  min-width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 200px;
+}
 
 .nav-pills>li>a {
   border-radius: 0px;
@@ -420,3 +426,27 @@ input.login.loginmodal-submit {
         left: 100%;
         margin-left: 15px;
     }
+
+    span.card-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+.white{
+  color: white;
+}
+
+.whitebk{
+  background-color: white;
+}
+
+
+.profile-circle {
+  float: left;
+}
+
+.proCircle {
+  /*float: left;*/
+   border-radius: 100px !important; 
+}
