@@ -1,5 +1,5 @@
 body {
-margin-top: 70px;
+/*margin-top: 70px;*/
 }
 
 .jumbotron h1,
@@ -315,4 +315,31 @@ div.margin {
 
 .spacer {
   margin-top: 30px;
+}
+
+footer.footer {
+  background-color: 353535;
+}
+
+
+.btn-round-lg{
+border-radius: 22.5px;
+}
+.btn-round{
+border-radius: 17px;
+}
+.btn-round-sm{
+border-radius: 15px;
+}
+.btn-round-xs{
+border-radius: 11px;
+padding-left: 10px;
+padding-right: 10px;
+}
+ .padLeft {
+  padding-left: 15px;
+ }
+
+ .btn-fullWidth {
+  min-width: 100%;
 }
