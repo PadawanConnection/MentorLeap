@@ -47,7 +47,7 @@ module.exports.routes = {
   },
 
   '/mentorprofile': {
-    views: 'home/mentorProfile'
+    view: 'home/mentorProfile'
   }
 
   /*

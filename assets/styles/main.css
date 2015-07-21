@@ -436,3 +436,17 @@ input.login.loginmodal-submit {
 .white{
   color: white;
 }
+
+.whitebk{
+  background-color: white;
+}
+
+
+.profile-circle {
+  float: left;
+}
+
+.proCircle {
+  /*float: left;*/
+   border-radius: 100px !important; 
+}
