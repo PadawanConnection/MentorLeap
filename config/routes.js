@@ -46,6 +46,10 @@ module.exports.routes = {
 
   '/register': {
     view: 'home/register'
+  },
+
+  '/howitworks': {
+    view: 'home/howitworks'
   }
 
   /*

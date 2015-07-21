@@ -17,7 +17,11 @@ module.exports = {
       max: 16,
       unique: true,
       required: true
-    },
+    },  
+    // mentor: {
+    //   type: 'boolean',
+    //   defaultsTo: 0,
+    // },
     password: {
       type: 'string',
       required: true
