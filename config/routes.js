@@ -48,6 +48,10 @@ module.exports.routes = {
 
   '/mentorprofile': {
     view: 'home/mentorProfile'
+  },
+
+  '/chat': {
+    view: 'home/chat'
   }
 
   /*
