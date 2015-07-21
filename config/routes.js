@@ -44,6 +44,10 @@ module.exports.routes = {
 
   '/howitworks': {
     view: 'home/howitworks'
+  },
+
+  '/mentorprofile': {
+    views: 'home/mentorProfile'
   }
 
   /*
