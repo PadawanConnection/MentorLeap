@@ -1,4 +1,9 @@
+ksfhgfl
 
+<% if (!user) { %>
+  <% if (error) { %>
+    <div class="alert alert-danger"><p><%= error %></p></div>
+  <% } %>
 
 <div class="container">
     <div class="row">
@@ -23,7 +28,7 @@
 <!-- __________ END LANDING HEADER __________ -->
 
 
-
+<% } else { %>
 
 <div class="row" id="chat">
   <div id="messages" class="col-xs-10"></div>
@@ -47,4 +52,4 @@
 <!-- __________ END FOOTER __________ -->
 
 </div>
-
+<% } %>
