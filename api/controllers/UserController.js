@@ -21,5 +21,10 @@ module.exports = {
    * Overrides for the settings in `config/controllers.js`
    * (specific to UserController)
    */
+  // 'new': function (req,res){
+  //   res.view();
+  // }, 
+  // we should have the update page show more detailed data
+
   _config: {},
 };
