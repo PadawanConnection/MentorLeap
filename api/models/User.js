@@ -8,9 +8,10 @@
 
 var bcrypt = require('bcrypt');
 
-schema:true,
 
 module.exports = {
+  
+  schema:true,
 
   attributes: {
 
@@ -46,7 +47,7 @@ module.exports = {
     },
      email:{
       type: 'string',
-      required:true,
+      // required:true, not until we have the form created
       unique:true
     },
      bio:{
@@ -88,7 +89,6 @@ module.exports = {
     var obj = this.toObject();
     delete obj.password;
     delete obj.confirmation;
-    delete obj._csrf;
     return obj;
    }
   
