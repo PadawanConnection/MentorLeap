@@ -41,7 +41,8 @@ module.exports = {
     },
      email:{
       type: 'string',
-      required:true
+      required:true,
+      unique:true
     },
      bio:{
       type:'string'
@@ -58,7 +59,7 @@ module.exports = {
      summary:{
       type:'string'
      },
-     // what type of mentor is the mentor?
+     // what type of mentor is the mentor?  
      expertise:{     
       type:'string'
      }
