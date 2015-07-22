@@ -18,10 +18,18 @@ module.exports = {
       unique: true,
       required: true
     },  
-    // mentor: {
-    //   type: 'boolean',
-    //   defaultsTo: 0,
-    // },
+    mentor: {
+      type: 'boolean',
+      defaultsTo: false,
+    },
+    name:{
+        first:{
+          type:'string',
+        },
+        last:{
+          type:'string',
+        }
+    },
     password: {
       type: 'string',
       required: true
@@ -30,7 +38,30 @@ module.exports = {
       type: 'boolean',
       defaultsTo: 0,
       required: true
-    }
+    },
+     email:{
+      type: 'string',
+      required:true
+    },
+     bio:{
+      type:'string'
+     },
+     workHistory:{
+      type:'string'
+     },
+     jobTitle:{
+      type:'string'
+     },
+     years:{
+      type:'integer'
+     },
+     summary:{
+      type:'string'
+     },
+     // what type of mentor is the mentor?
+     expertise:{     
+      type:'string'
+     }
 
   },
   
