@@ -8,6 +8,8 @@
 
 var bcrypt = require('bcrypt');
 
+schema:true,
+
 module.exports = {
 
   attributes: {
@@ -79,11 +81,16 @@ module.exports = {
       next();
     });
 
-  }
+  },
 
-  // maybe needed to send the users somewhere...
-  // toJSON: function(){
-  //   var obj=this.toObject();
-  // }
+  // so the client will never see what's in user creation
+  toJSON: function(){
+    var obj = this.toObject();
+    delete obj.password;
+    delete obj.confirmation;
+    delete obj._csrf;
+    return obj;
+   }
+  
 
 };
