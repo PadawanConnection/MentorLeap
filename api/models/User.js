@@ -34,6 +34,9 @@ module.exports = {
       type: 'string',
       required: true
     },
+    google:{
+      type:'string'
+    },
     loggedIn: {
       type: 'boolean',
       defaultsTo: 0,
