@@ -18,7 +18,7 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'localPostgresqlServer'
+    connection: 'someMongoDb'
   }
 
 };

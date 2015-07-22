@@ -61,12 +61,10 @@ module.exports.connections = {
     adapter: 'sails-mongo',
     host: 'localhost', // defaults to `localhost` if omitted
     port: 27017, // defaults to 27017 if omitted
+    url: process.env.MONGOLAB_URI,
     database: 'mentorLeap' // or omit if not relevant
   }
-  // UNCOMMENT THIS ONCE WE HAVE MONGO WORKING ON LOCAL MACHINES
-  // heroku env_variable 
-  //   url: process.env.MONGOLAB_URI
-  // },
+  
 
   /***************************************************************************
   *                                                                          *
