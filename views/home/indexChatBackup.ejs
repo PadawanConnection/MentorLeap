@@ -9,7 +9,7 @@
       <li role="presentation" ><a href="#">Find a Mentor</a></li>
       <li role="presentation"><a href="/mentorProfile">Watch Videos</a></li>
       <li role="presentation"><a href="/howitworks">How it Works</a></li>
-      <li role="presentation" class="mentor"><a href="/mentorreg">Be a Mentor</a></li>
+      <li role="presentation" class="mentor"><a href="/mentorsignup">Be a Mentor</a></li>
     </ul>
   </div>
 <div class="row spacer"></div>
@@ -292,9 +292,29 @@
 <!-- 2 rows -->
 <!-- __________ END RECENT VIDEOS GRID __________ -->
 
-</div>
+
 <% } else { %>
-  <div class="container">
-    <h2>You shouldn't be seeing this!</h2>
+
+<div class="row" id="chat">
+  <div id="messages" class="col-xs-10"></div>
+  <div id="users" class="col-xs-2">
+    <p class="lead">Users</p>
+    <ul></ul>
   </div>
+</div>
+
+<div class="row" id="message-entry">
+  <div class="col-xs-11">
+    <input id="new-message" class="form-control" type="text" name="new-message" />
+  </div>
+  <div class="col-xs-1">
+    <button id="send-message" class="btn btn-default">Send</button>
+  </div>
+</div>
+
+<!-- __________ FOOTER __________ -->
+
+<!-- __________ END FOOTER __________ -->
+
+</div>
 <% } %>

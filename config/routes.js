@@ -54,7 +54,17 @@ module.exports.routes = {
 
   '/mentorprofile': {
     view: 'home/mentorProfile'
+  },
+
+  '/chat': {
+    view: 'home/chat'
+  },
+
+  '/mentorReg': {
+    view: 'home/mentorreg'
   }
+
+
 
   /*
   // But what if you want your home page to display
