@@ -42,6 +42,8 @@ module.exports.routes = {
 
   'post /login': 'MainController.login',
 
+  'post /loginmentor': 'MainController.loginMentor',
+
   'get /logout': 'MainController.logout',
 
   '/register': {
