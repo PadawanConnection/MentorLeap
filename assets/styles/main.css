@@ -318,11 +318,6 @@ div.margin {
   margin-top: 30px;
 }
 
-footer.footer {
-  background-color: 353535;
-}
-
-
 .btn-round-lg{
 border-radius: 22.5px;
 }
@@ -449,4 +444,9 @@ input.login.loginmodal-submit {
 .proCircle {
   /*float: left;*/
    border-radius: 100px !important; 
+}
+
+footer.footer {
+  min-height: 200px;
+  background-color: #888;
 }
