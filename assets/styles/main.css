@@ -450,3 +450,12 @@ footer.footer {
   min-height: 200px;
   background-color: #888;
 }
+
+select.form-control {
+  border-radius: 4px;
+  -webkit-appearance: none;
+}
+
+span.input-group-addon {
+  min-width: 100px;
+}
