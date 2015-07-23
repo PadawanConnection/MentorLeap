@@ -89,6 +89,8 @@ module.exports = {
     var obj = this.toObject();
     delete obj.password;
     delete obj.confirmation;
+    delete obj.encryptedPassword;
+    delete obj._csrf;
     return obj;
    }
   
