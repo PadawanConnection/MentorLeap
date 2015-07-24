@@ -40,7 +40,16 @@ module.exports = {
       if(err) return next(err);
       if(!user) return next();
       res.view({
-        user: user
+        user: user  //one user passed as object
+      });
+    });
+  },
+
+  index: function(req,res,next){ 
+    User.find(function foundUsers(err, users){
+      if (err) return next(err);
+      res.view({
+        users: users  //array of users sent as obj
       });
     });
   },
