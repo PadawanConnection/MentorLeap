@@ -62,6 +62,10 @@ module.exports.routes = {
     view: 'home/chat'
   },
 
+  '/video': {
+   view: 'user/youtubeUpload'
+  },
+
   '/mentorReg': {
     view: 'home/mentorreg'
   }
