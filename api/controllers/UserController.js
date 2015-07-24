@@ -38,7 +38,7 @@ module.exports = {
   show: function(req, res, next){
     User.findOne(req.param('id'),function foundUser(err,user){
       if(err) return next(err);
-      if(!user) return next();
+      if(!user) return next('User does not exist.');
       res.view({
         user: user  //one user passed as object
       });
@@ -57,7 +57,7 @@ module.exports = {
   edit: function(req, res, next){
     User.findOne(req.param('id'),function foundUser(err,user){
       if(err) return next(err);
-      if(!user) return next();
+      if(!user) return next('User does not exist.');
       res.view({
         user: user  //one user passed as object
       });
