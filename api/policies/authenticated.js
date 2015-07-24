@@ -20,7 +20,7 @@ module.exports = function(req, res, next) {
     req.session.flash={
       err: requireLoginError
     };
-    res.redirect('/session/new');
+    res.redirect('index');
     return;
   }
   

@@ -18,9 +18,9 @@ module.exports.policies = {
   // (`true` allows public access) 
   '*': 'flash',
 
-  user:{
+  userController:{
   	'new': 'flash',
-  	'*': 'authenticated'
+  	// '*': 'authenticated'
   },
 
   MessageController: {
