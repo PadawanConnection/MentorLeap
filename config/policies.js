@@ -18,6 +18,11 @@ module.exports.policies = {
   // (`true` allows public access) 
   '*': 'flash',
 
+  user:{
+  	'new': 'flash',
+  	'*': 'authenticated'
+  },
+
   MessageController: {
     'create': 'messagePolicy'
   }
