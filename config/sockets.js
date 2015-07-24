@@ -14,15 +14,9 @@ module.exports.sockets = {
   // (To control whether a socket is allowed to connect, check out `authorization` config.)
   // Keep in mind that Sails' RESTful simulation for sockets 
   // mixes in socket.io events for your routes and blueprints automatically.
-  onConnect: function(session, socket) {
-
-    // By default: do nothing
-    // This is a good place to subscribe a new socket to a room, inform other users that
-    // someone new has come online, or any other custom socket.io logic
-  },
-
+  
   // This custom onDisconnect function will be run each time a socket disconnects
-  onDisconnect: function(session, socket) {
+  afterDisconnect: function(session, socket) {
     if (session.user) {
       User.publishUpdate(session.user.id, { id: session.user.id, loggedIn: 0 });
     }

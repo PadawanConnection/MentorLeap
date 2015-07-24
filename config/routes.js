@@ -38,33 +38,33 @@ module.exports.routes = {
   // }
 
   // old route block 
-  '/': 'MainController.main',
+  // '/': 'MainController.main',
 
-  'post /login': 'MainController.login',
+  // 'post /login': 'MainController.login',
 
-  'post /loginmentor': 'MainController.loginMentor',
+  // 'post /loginmentor': 'MainController.loginMentor',
 
-  'get /logout': 'MainController.logout',
+  // 'get /logout': 'MainController.logout',
 
-  '/register': {
-    view: 'home/register'
-  },
+  // '/register': {
+  //   view: 'home/register'
+  // },
 
-  '/howitworks': {
-    view: 'home/howitworks'
-  },
+  // '/howitworks': {
+  //   view: 'home/howitworks'
+  // },
 
-  '/mentorprofile': {
-    view: 'home/mentorProfile'
-  },
+  // '/mentorprofile': {
+  //   view: 'home/mentorProfile'
+  // },
 
-  '/chat': {
-    view: 'home/chat'
-  },
+  // '/chat': {
+  //   view: 'home/chat'
+  // },
 
-  '/mentorReg': {
-    view: 'home/mentorreg'
-  }
+  // '/mentorReg': {
+  //   view: 'home/mentorreg'
+  // }
   
   
 
