@@ -17,29 +17,18 @@
 
 module.exports = {
 
-  /**
-   * Overrides for the settings in `config/controllers.js`
-   * (specific to UserController)
-   */
-  // this should point to the login modal - which should be referenced as /user/new
-  // we should overwrite main and move the functionality over here for user...
-  // 'new': function (req,res){
-  //   res.view();
-  //   req.session.flash ={};
-  // }, 
+  'new': function (req,res){
+    res.view();
+    req.session.flash ={};
+  }, 
 
-  // create: function (req,res, next){
-  //   User.create( req.params.all(), function userCreated (err,user){
-  //     if(err){
-  //       console.log(err);
-  //       // have to notify the user somehow
-  //       }
-  //       return res.redirect('user/new');
-  //     res.json(user);
-  //   });
-  // },
-
-  // we should have the update page show more detailed data
+  create: function (req,res, next){
+    User.create(req.params.all(), function userCreated (err,user){
+      if(err) return next(err);
+      res.json(user);
+    });
+  },
+  
 
   _config: {},
 };
