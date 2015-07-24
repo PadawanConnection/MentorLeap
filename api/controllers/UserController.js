@@ -28,9 +28,9 @@ module.exports = {
        req.session.flash={
         err: err
        };
-       return res.redirect('user/new');
+       return res.redirect('/user/new');
       } 
-      res.redirect('user/show/'+user.id);
+      res.redirect('/user/show/'+user.id);
       // return res.json(user);
     });
   },
@@ -67,9 +67,20 @@ module.exports = {
   update: function(req, res, next){
     User.update(req.param('id'),req.params.all(),function userUpdated(err){
       if(err){
-       res.redirect('user/edit/'+req.param('id'));
+       res.redirect('/user/edit/'+req.param('id'));
       }
-      res.redirect('user/show/'+req.param('id'));
+      res.redirect('/user/show/'+req.param('id'));
+    });
+  },
+
+  destroy: function(req, res, next){
+    User.findOne(req.param('id'),function foundUser(err,user){
+      if(err) return next(err);
+      if(!user) return next('User does not exist.');
+      User.destroy(req.param('id'),function userDestroyed(err){
+        if(err) return next(err);
+      });
+    res.redirect('/user');
     });
   },
 
