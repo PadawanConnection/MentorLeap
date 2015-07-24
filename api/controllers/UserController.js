@@ -30,10 +30,20 @@ module.exports = {
        };
        return res.redirect('user/new');
       } 
-      return res.json(user);
+      res.redirect('user/show/'+user.id);
+      // return res.json(user);
     });
   },
   
+  show: function(req, res, next){
+    User.findOne(req.param('id'),function foundUser(err,user){
+      if(err) return next(err);
+      if(!user) return next();
+      res.view({
+        user: user
+      });
+    });
+  },
 
   _config: {},
 };
