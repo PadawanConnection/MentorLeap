@@ -64,6 +64,34 @@ module.exports = {
     });
   },
 
+  loginMentor: function (req, res) {
+
+    User.findOneByUsername(req.param('username'), function (err, user) {
+      if (err) res.view('home/index', { user: false, error: 'Error finding user.' });
+
+      if (user) {
+        var match = bcrypt.compareSync(req.param('password'), user.password);
+
+        if (match) {
+          user.loggedIn = 1;
+          user.save(function (err) {
+            if (err) res.view('home/index', { error: 'Error logging in', user: false });
+
+            User.publishUpdate(user.id, { id: user.id, username: user.username, loggedIn: 1 });
+
+            req.session.user = user;
+            res.redirect('/chat');
+          });
+        } else {
+          res.view('home/index', { error: 'Invalid password', user: false });
+        }
+      } else {
+        res.view('home/index', { error: 'User not found', user: false });
+      }
+    });
+  },
+
+
   logout: function (req, res) {
 
     User.findOne(req.session.user.id, function (err, user) {
