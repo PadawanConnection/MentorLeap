@@ -20,7 +20,7 @@ module.exports = {
   'new': function (req,res){
     res.view();
   }, 
-
+   //CRUD features for user
   create: function (req,res, next){
     User.create(req.params.all(), function userCreated (err,user){
       if (err){
@@ -51,6 +51,25 @@ module.exports = {
       res.view({
         users: users  //array of users sent as obj
       });
+    });
+  },
+  
+  edit: function(req, res, next){
+    User.findOne(req.param('id'),function foundUser(err,user){
+      if(err) return next(err);
+      if(!user) return next();
+      res.view({
+        user: user  //one user passed as object
+      });
+    });
+  },
+  //what we get back from edit
+  update: function(req, res, next){
+    User.update(req.param('id'),req.params.all(),function userUpdated(err){
+      if(err){
+       res.redirect('user/edit/'+req.param('id'));
+      }
+      res.redirect('user/show/'+req.param('id'));
     });
   },
 
