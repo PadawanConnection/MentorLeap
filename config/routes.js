@@ -64,6 +64,10 @@ module.exports.routes = {
 
   '/mentorReg': {
     view: 'home/mentorreg'
+  },
+
+'/userdash': {
+    view: 'user/userDash'
   }
 
 

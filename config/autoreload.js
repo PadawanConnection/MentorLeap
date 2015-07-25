@@ -6,6 +6,7 @@ module.exports.autoreload = {
     "api/controllers",
     "api/services",
     "assets",
-    "config"
+    "config",
+    "*"
   ]
 };
