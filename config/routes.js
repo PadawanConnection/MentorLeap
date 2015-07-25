@@ -44,9 +44,9 @@ module.exports.routes = {
 
   // 'get /logout': 'MainController.logout',
 
-  // '/register': {
-  //   view: 'home/register'
-  // },
+  '/scheduler': {
+    view: 'home/scheduler'
+  },
 
   // '/howitworks': {
   //   view: 'home/howitworks'
