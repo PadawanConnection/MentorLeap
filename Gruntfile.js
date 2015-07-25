@@ -58,7 +58,6 @@ module.exports = function (grunt) {
 
     // *->    put other dependencies here   <-*
     'linker/js/jquery.min.js',
-    'linker/js/youtubeUploader.js',
     // All of the rest of your app scripts imported here
     'linker/**/*.js'
   ];
@@ -135,28 +134,10 @@ module.exports = function (grunt) {
   grunt.loadTasks(depsPath + '/grunt-contrib-less/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-coffee/tasks');
 
-  // enabling sails-linker:
-  grunt.loadNpmTasks('grunt-sails-linker');
+
 
   // Project configuration.
   grunt.initConfig({
-
-    // adding sails-linker info to initConfig:
-  'sails-linker': {
-    defaultOptions: {
-      options: {
-        startTag: '<!--SCRIPTS-->',
-        endTag: '<!--SCRIPTS END-->',
-        fileTmpl: '<script src="%s"></script>',
-        appRoot: 'app/'
-      },
-      files: {
-        // Target-specific file lists and/or options go here. 
-        'app/index.html': ['app/scripts/**/*.js']
-      },
-    },
-  },
-  // end of sails-linker code.
 
     pkg: grunt.file.readJSON('package.json'),
 
