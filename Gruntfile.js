@@ -57,7 +57,8 @@ module.exports = function (grunt) {
     'linker/js/app.js',
 
     // *->    put other dependencies here   <-*
-
+    'linker/js/jquery.min.js',
+    'linker/js/youtubeUploader.js',
     // All of the rest of your app scripts imported here
     'linker/**/*.js'
   ];

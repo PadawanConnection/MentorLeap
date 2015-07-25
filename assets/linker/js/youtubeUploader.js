@@ -1,6 +1,5 @@
 //script for YouTube uploader and viewer:
 
-$( document ).ready(function() {
 // 2. Asynchronously load the Upload Widget and Player API code.
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
@@ -44,4 +43,3 @@ $( document ).ready(function() {
       events: {}
     });
   }
-});

@@ -11,8 +11,8 @@
 
      <title>Mentor Leap</title>
      
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-       <script src="/assets/js/youtubeUploader.js">
+     <script src="/assets/linker/js/jquery.min.js"></script>
+       <script src="/assets/linker/js/youtubeUploader.js">
      </script>
 
      <link rel="stylesheet" type="text/css" href="/CSS/custom.css">
@@ -27,6 +27,54 @@
 
 <body> 
 
+<script>
+$( document ).ready(function() {
+// 2. Asynchronously load the Upload Widget and Player API code.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. Define global variables for the widget and the player.
+  // The function loads the widget after the JavaScript code has
+  // downloaded and defines event handlers for callback notifications related to the widget.
+  var widget;
+  var player;
+  function onYouTubeIframeAPIReady() {
+    widget = new YT.UploadWidget('widget', {
+      width: 1000,
+      height: 650,
+      events: {
+        'onUploadSuccess': onUploadSuccess,
+        'onProcessingComplete': onProcessingComplete
+      }
+    });
+  }
+
+  // 4. This function is called when a video has been successfully uploaded.
+  function onUploadSuccess(event) {
+    $("#videoForm").css({"display":"block"});
+      // $('#videoForm').innerHtml="Success!!!";
+      console.log("Button function happening!");
+    // 1. post event.data.videoId to 'user/:id/videos'
+    // 2. add event.data.videoId to a hidden input field
+    $('#videoId').val(event.data.videoId);
+    // $('form').submit();
+    
+    // alert('Video ID ' + event.data.videoId + ' was uploaded and is currently being processed.');
+    // console.log("This is the " + event.data.videoId);
+  }
+
+  // 5. This function is called when a video has been successfully processed.
+  function onProcessingComplete(event) {
+    player = new YT.Player('player', {
+      videoId: event.data.videoId,
+      events: {}
+    });
+  }
+});
+</script>
+
 
 <!-- Video Recorder -->
    <!--1. The 'widget' div element contains the upload widget. -->
@@ -35,26 +83,30 @@
    <div id="widget"></div>
    <!-- Attempting to pull directly from the assets folder -->
    <div>
-   	<script src="/assets/js/youtubeUploader"></script>
+   	<script src="/assets/linker/js/youtubeUploader"></script>
    </div>
    <!-- Attempting to pull from the temporary folder -->
    <div>
    	<script src="/tmp/public/js/youtubeUploader"></script>
 
 <!-- Attempting to pull from layout.ejs (Scripts) -->
-<% block('localScripts', '<script src=/assets/js/youtubeUploader></script>') %>
-<% block('localScripts', '<script src=/js/youtubeUploader></script>') %>
-<% block('localScripts', '<script src=js/youtubeUploader></script>') %>
+<% block('localScripts', '<script src=/assets/linker/js/youtubeUploader></script>') %>
+<% block('localScripts', '<script src=/linker/js/youtubeUploader></script>') %>
+<% block('localScripts', '<script src=linker/js/youtubeUploader></script>') %>
 
+</div>
+<div>
+  <script src='.tmp/public/linker/js/youtubeUploader'></script>
+</div>
 <!-- End Video Recorder -->
 
 <!-- script tags are going to be injected here -->
     <!--SCRIPT-->
-    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/linker/js/jquery.min.js"></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/assets/js/youtubeUploader"></script>
-    <script src="js/youtubeUploader.js"></script>
-    <script src="/js/youtubeUploader.js"></script>
+    <script src="/assets/linker/js/youtubeUploader"></script>
+    <script src="linker/js/youtubeUploader.js"></script>
+    <script src="/linker/js/youtubeUploader.js"></script>
     <!--SCRIPTS END--> 
  </body>
 </html>
