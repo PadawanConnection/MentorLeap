@@ -18,7 +18,7 @@ var bcrypt = require('bcrypt');
 
 module.exports = {
 
-  main: function (req, res) {
+  // main: function (req, res) {
   //   if (req.session.user) {
   //     User.findOne(req.session.user.id, function (err, user) {
   //       if (err) {
@@ -33,9 +33,9 @@ module.exports = {
   //       }
   //     });
   //   } else {
-      res.view('home/index.ejs', { user: false, error: false });
+  //     res.view('home/index.ejs', { user: false, error: false });
   //   }
-  },
+  // },
 
   // login: function (req, res) {
 

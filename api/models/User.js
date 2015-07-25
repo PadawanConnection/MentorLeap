@@ -68,18 +68,11 @@ module.exports = {
      // what type of mentor is the mentor?  
      expertise:{     
       type:'string'
-     },
-     videoID:{
-      type:'string'
-    }
+     }
 
   },
   
   beforeCreate: function (values, next) {
-    // check the password confirmation 
-    if(!values.password || values.password != values.passwordConfirm){
-      return next({err:["Passwords Do Not Match"]});
-    }    
 
     var salt = bcrypt.genSaltSync(10);
 

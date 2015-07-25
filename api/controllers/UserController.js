@@ -14,7 +14,6 @@
  *
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
-var bcrypt = require('bcrypt');
 
 module.exports = {
 
@@ -39,7 +38,7 @@ module.exports = {
   show: function(req, res, next){
     User.findOne(req.param('id'),function foundUser(err,user){
       if(err) return next(err);
-      if(!user) return next('User does not exist.');
+      if(!user) return next();
       res.view({
         user: user  //one user passed as object
       });
@@ -58,7 +57,7 @@ module.exports = {
   edit: function(req, res, next){
     User.findOne(req.param('id'),function foundUser(err,user){
       if(err) return next(err);
-      if(!user) return next('User does not exist.');
+      if(!user) return next();
       res.view({
         user: user  //one user passed as object
       });
@@ -71,18 +70,6 @@ module.exports = {
        res.redirect('/user/edit/'+req.param('id'));
       }
       res.redirect('/user/show/'+req.param('id'));
-    });
-  },
-  
-  login: function (req, res) {
-    User.findOneByUsername(req.param('username'), function (err, user) {
-      if(err) return next(err);
-      if (user) {
-        var match = bcrypt.compareSync(req.param('password'), user.password);
-        if (match) {
-            res.redirect('/user/show/'+user.id);
-        }
-      }
     });
   },
 

@@ -16,20 +16,10 @@ module.exports.policies = {
 
   // Default policy for all controllers and actions
   // (`true` allows public access) 
-  '*': [ 'basicAuth', 'passport', 'sessionAuth','flash' ],
-
-  userController:{
-  	'new': 'flash',
-    'create':true
-  	// '*': 'authenticated'
-  },
+  '*': 'flash',
 
   MessageController: {
     'create': 'messagePolicy'
-  },
-   
-  AuthController: {
-    '*': [ 'passport' ]
   }
 
   /*
