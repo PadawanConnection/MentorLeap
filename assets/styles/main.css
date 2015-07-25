@@ -1,7 +1,6 @@
 /*Brand Colors: Blue( #197EB5 ) Gray( #999999 )*/
 
 body {
-/*margin-top: 70px;*/
 font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
 }
 
@@ -17,7 +16,6 @@ font-size: 1.4em;
 #messages {
   border-bottom: 1px solid #eee;
   margin-bottom: 10px;
-  /*position: absolute;*/
   bottom: 0;
   overflow: auto;
 }
@@ -632,7 +630,7 @@ body {
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #fff;
-  background-color: #428bca;
+  background-color: #428bca !important;
 }
 
 
@@ -653,26 +651,11 @@ body {
   margin-top: 0;
 }
 
-
-/*
- * Placeholder dashboard ideas
- */
-
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+.col-sm-3.col-md-2.sidebar {
+    height: 100vw;
+    top: 0px;
+    padding-top: 52px;
 }
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
-}
-
 .nav>li:hover {
     background-color: #999999;
     color: #ffffff;
@@ -690,4 +673,9 @@ h4.quote {
     font-style: italic;
     font-size: 2rem;
     float: right;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #eee;
 }

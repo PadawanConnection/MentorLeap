@@ -42,7 +42,8 @@ module.exports = function (grunt) {
    */
 
   var jsFilesToInject = [
-
+  '*.*',
+    'linker/**/*.js',
     // Below, as a demonstration, you'll see the built-in dependencies 
     // linked in the proper order order
 
