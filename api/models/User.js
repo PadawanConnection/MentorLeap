@@ -68,6 +68,9 @@ module.exports = {
      // what type of mentor is the mentor?  
      expertise:{     
       type:'string'
+     },
+     videoid:{
+      type:'string'
      }
 
   },
