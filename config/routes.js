@@ -46,6 +46,8 @@ module.exports.routes = {
 
   'get /logout': 'MainController.logout',
 
+  'get /video': 'VideoController.main',
+
   '/register': {
     view: 'home/register'
   },
@@ -61,6 +63,14 @@ module.exports.routes = {
   '/chat': {
     view: 'home/chat'
   },
+
+  '/videoSuccess': {
+    view: 'home/videoSuccess'
+  },
+
+  // '/video': {
+  //  view: 'user/youtubeUpload'
+  // },
 
   '/mentorReg': {
     view: 'home/mentorreg'

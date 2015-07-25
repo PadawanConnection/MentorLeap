@@ -33,5 +33,8 @@
     "url": "https://github.com/PadawanConnection/MentorLeap/issues"
   },
   "homepage": "https://github.com/PadawanConnection/MentorLeap",
-  "main": "app.js"
+  "main": "app.js",
+  "devDependencies": {
+    "grunt-sails-linker": "^0.10.1"
+  }
 }

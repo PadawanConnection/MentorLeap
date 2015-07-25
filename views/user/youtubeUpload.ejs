@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Record Videos" content="">
+  <meta name="mentorLeap" content="">
+
+     <title>Mentor Leap</title>
+     <link rel="stylesheet" type="text/css" href="/CSS/custom.css">
+
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+</head>
+<body> 
+<!-- Video Recorder -->
+   <!--1. The 'widget' div element contains the upload widget. -->
+   <!-- The 'player' div element contains the player IFrame. -->
+   <div id="videoUploader"></div>
+   <div id="widget"></div>
+
+        <h2>To save your video, please complete the form below:</h2>
+    <div class="row">
+      <div class="col-md-1 col-sm-1">
+      </div>
+      <div class="col-md-8 col-sm-10">
+   <div id="videoForm">
+    <form role="form" action="/video" method="post">
+      <div class="form-group">
+        <input class="form-control"
+        title="title"
+        type="text"
+        placeholder="Title"
+        />
+      </div>
+      <div class="form-group">
+        <input class="form-control"
+        title="description"
+        type="text"
+        placeholder="Description"
+        />
+      </div>
+      <div class="form-group">
+        <input class="form-control"
+        title="patron_id"
+        type="hidden"
+        />
+      </div>
+      <div class="form-group">
+        <input class="form-control"
+        title="videoId"
+        type="hidden"
+        />
+      </div>
+      <button type="submit" class="btn btn-default">Save Video</button>
+
+<!-- End Video Recorder -->
+
+<!-- script tags are going to be injected here -->
+    <!--SCRIPT-->
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Injecting script for videoUploader -->
+    <script src="/linker/js/youtubeUploader.js"></script>
+    <!--SCRIPTS END--> 
+ </body>
+</html>

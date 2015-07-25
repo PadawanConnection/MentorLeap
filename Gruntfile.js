@@ -57,7 +57,7 @@ module.exports = function (grunt) {
     'linker/js/app.js',
 
     // *->    put other dependencies here   <-*
-
+    'linker/js/jquery.min.js',
     // All of the rest of your app scripts imported here
     'linker/**/*.js'
   ];
@@ -134,8 +134,11 @@ module.exports = function (grunt) {
   grunt.loadTasks(depsPath + '/grunt-contrib-less/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-coffee/tasks');
 
+
+
   // Project configuration.
   grunt.initConfig({
+
     pkg: grunt.file.readJSON('package.json'),
 
     copy: {
