@@ -33,14 +33,12 @@ module.exports.routes = {
   // 
   // (This would also work if you had a file at: `/views/home.ejs`)
   
-  // '/':{
-  //   view: '/static/index'
-  // }
+  
 
   // old route block 
-  // '/': 'MainController.main',
+  '/': 'MainController.main',
 
-  // 'post /login': 'MainController.login',
+  'post /login': 'UserController.login',
 
   // 'post /loginmentor': 'MainController.loginMentor',
 

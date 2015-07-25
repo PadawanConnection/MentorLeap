@@ -83,7 +83,7 @@
             <br>
              <div class="strike"> <span><h4>or</h4></span> </div>
              <br>
-            <form role="login" action="/session/create" method="POST">
+            <form role="login" action="/login" method="POST">
             <input type="text" class="form-control" placeholder="Username" name="username" autofocus/>
             <input type="password" class="form-control" placeholder="Password" name="password" />
             <input type="submit" name="login" class="login loginmodal-submit" value="Login">
@@ -99,7 +99,7 @@
         <p class="navbar-right navbar-text">
           Welcome, <strong><%= user.username %></strong>
           &nbsp;|&nbsp;
-          <form action="logout" method="GET"><a href="/session/destroy">Logout</a></form>
+          <form action="logout" method='post'><a href="/session/destroy">Logout</a></form>
         </p>
         <% } %>
       </ul>
