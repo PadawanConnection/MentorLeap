@@ -700,3 +700,27 @@ button.btn.btn-clean.btn-round-lg.btn-lg.btn-card {
     margin-bottom: 15px;
     width: 100%;
 }
+
+.col-sm-12.panel.mentorCard {
+    border: 2px solid #CECECE;
+    padding: 15px;
+}
+
+.col-sm-12.box {
+    border-top: 1px solid #C3C3C3;
+    width: 113%;
+    margin-left: -15px;
+    padding-top: 10px;
+}
+
+ul.mentorBox {
+    list-style: none;
+    margin-left: -40px;
+    margin-bottom: -8px;
+
+}
+
+li.mentorBoxList:first-child {
+    border-right: 2px solid #D0D0D0;
+    padding-right: 50px;
+}
