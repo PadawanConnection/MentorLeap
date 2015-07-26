@@ -19,10 +19,10 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <div class="row">
     <div class="col-sm-12">
-        <h1 class="page-header">Welcome back, <%= user.username %>!</h1>
-        <%= user.firstname %>
+        <h1 class="page-header">Welcome back, <%= user %>!</h1>
+   <!--      <%= user.firstname %>
         <%= user.lastname %>
-        <%= user.email %>
+        <%= user.email %> -->
         <ul> 
             <% for(var i=0; i<user.length; i++) {%>
                 <li><%= user[i] %></li>
