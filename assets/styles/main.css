@@ -679,3 +679,24 @@ h4.quote {
     text-decoration: none;
     background-color: #eee;
 }
+
+
+
+footer.footer.container-fluid {
+    display: table;
+}
+
+img.img-responsive {
+    border-radius: 220px;
+    width: 100px;
+}
+
+img.img-responsive.mentor {
+    width: 69%;
+    margin: auto;
+}
+
+button.btn.btn-clean.btn-round-lg.btn-lg.btn-card {
+    margin-bottom: 15px;
+    width: 100%;
+}
