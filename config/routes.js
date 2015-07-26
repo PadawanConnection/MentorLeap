@@ -76,7 +76,7 @@ module.exports.routes = {
     view: 'home/mentorreg'
   },
 
-'/user': {
+'/userdash': {
     view: 'user/userDash'
   }
 
