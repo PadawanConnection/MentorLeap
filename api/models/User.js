@@ -37,6 +37,9 @@ module.exports = {
       type: 'string',
       required: true
     },
+    encryptedPassword:{
+      type:'string'
+    },
     google:{
       type:'string'
     },
@@ -92,6 +95,7 @@ module.exports = {
     var obj = this.toObject();
     delete obj.password;
     delete obj.passwordConfirm;
+    delete obj.encryptedPassword;
     return obj;
    }
   

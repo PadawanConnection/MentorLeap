@@ -1,0 +1,8 @@
+<h2 class="form-signin-heading">
+<% if(flash && flash.err) { %>
+<ul class="alert alert-warning">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
