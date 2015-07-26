@@ -83,13 +83,13 @@
     passwordConfirm = registerForm.find("input[name=passwordConfirm]");
     firstname = registerForm.find("input[name=firstname]"),
     lastname = registerForm.find("input[name=lastname]"),
+    email = registerForm.find("input[name=email]"),
+    state = registerForm.find("input[name=state]"),
+    mentor = registerForm.find("input[name=mentor]")
     title = registerForm.find("input[name=title]"),
     company = registerForm.find("input[name=company]"),
     city = registerForm.find("input[name=city]"),
-    state = registerForm.find("input[name=state]"),
-    state = registerForm.find("input[name=state]"),
-    state = registerForm.find("input[name=state]"),
-    mentor = registerForm.find("input[name=mentor]");
+    state = registerForm.find("input[name=state]");
 
   errorDiv.hide();
   successDiv.hide();
@@ -110,28 +110,25 @@
     }
   });
 
-  var register = function (username, password) {
+  var register = function (username, password, firstname, lastname, email, mentor) {
     $.post('/user', {
       username: username,
       password: password,
       firstname: firstname,
       lastname: lastname,
+      mentor: mentor,
       title: title,
       company: company,
       city: city,
       state: state,
-      email: email,
-      bio:
-      workHistory:
-      jobTitle:
-      years:
-     },
-     summary:
-     // what type of mentor is the mentor?  
-     expertise:{     
-      type:'string'
-     }
-
+      email: email
+     //  ,
+     //  bio: bio,
+     //  workHistory: workHistory,
+     //  jobTitle: jobTitle,
+     //  years: years,
+     // summary: summary,
+     // expertise: expertise
     }).success(function (data) {
       successDiv.html("<p>Successfully create user " + data.username + ". You may log in now.</p>");
       successDiv.slideDown();

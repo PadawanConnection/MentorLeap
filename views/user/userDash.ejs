@@ -22,6 +22,7 @@
         <h1 class="page-header">Welcome back, <%= user.username %>!</h1>
         <%= user.firstname %>
         <%= user.lastname %>
+        <%= user.email %>
         <ul> 
             <% for(var i=0; i<user.length; i++) {%>
                 <li><%= user[i] %></li>
