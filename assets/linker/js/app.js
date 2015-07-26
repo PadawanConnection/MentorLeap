@@ -80,13 +80,13 @@
     successDiv = $("#success"),
     username = registerForm.find("input[name=username]"),
     password = registerForm.find("input[name=password]"),
-    passwordConfirm = registerForm.find("input[name=passwordConfirm]"),
-    firstname = registerForm.find("input[name=firstname]"),
-    lastname = registerForm.find("input[name=lastname]"),
-    title = registerForm.find("input[name=title]"),
-    company = registerForm.find("input[name=company]"),
-    city = registerForm.find("input[name=city]"),
-    state = registerForm.find("input[name=state]");
+    passwordConfirm = registerForm.find("input[name=passwordConfirm]");
+    // firstname = registerForm.find("input[name=firstname]"),
+    // lastname = registerForm.find("input[name=lastname]"),
+    // title = registerForm.find("input[name=title]"),
+    // company = registerForm.find("input[name=company]"),
+    // city = registerForm.find("input[name=city]"),
+    // state = registerForm.find("input[name=state]");
 
   errorDiv.hide();
   successDiv.hide();
@@ -114,6 +114,7 @@
     }).success(function (data) {
       successDiv.html("<p>Successfully create user " + data.username + ". You may log in now.</p>");
       successDiv.slideDown();
+      console.log(data);
     }).fail(function (data) {
       errorDiv.html("<p>Error creating user.</p>");
       errorDiv.slideDown();
@@ -121,25 +122,26 @@
     });
   };
 
-   var registerMen = function (username, password, firstname, lastname, title, company, city, state) {
-    $.post('/regmentor', {
-      username: username,
-      password: password,
-      firstname: firstname,
-      lastname: lastname,
-      title: title,
-      company: company,
-      city: city,
-      state: state
-    }).success(function (data) {
-      successDiv.html("<p>Successfully created Mentor " + data.username + ". You may log in now.</p>");
-      successDiv.slideDown();
-    }).fail(function (data) {
-      errorDiv.html("<p>Error creating mentor.</p>");
-      errorDiv.slideDown();
-      console.log(data);
-    });
-  };
+
+  //  var registerMen = function (username, password, firstname, lastname, title, company, city, state) {
+  //   $.post('/regmentor', {
+  //     username: username,
+  //     password: password,
+  //     firstname: firstname,
+  //     lastname: lastname,
+  //     title: title,
+  //     company: company,
+  //     city: city,
+  //     state: state
+  //   }).success(function (data) {
+  //     successDiv.html("<p>Successfully created Mentor " + data.username + ". You may log in now.</p>");
+  //     successDiv.slideDown();
+  //   }).fail(function (data) {
+  //     errorDiv.html("<p>Error creating mentor.</p>");
+  //     errorDiv.slideDown();
+  //     console.log(data);
+  //   });
+  // };
 
 
 })(jQuery);

@@ -26,7 +26,7 @@ module.exports = {
         } else {
           if (user) {
             Message.subscribe(req.socket);
-            res.view('home/chat.ejs', { user: user, error: false });
+            res.view('user/userDash.ejs', { user: user, error: false });
           } else {
             res.view('home/index.ejs', { user: false, error: 'Error finding user' });
           }
@@ -53,7 +53,7 @@ module.exports = {
             User.publishUpdate(user.id, { id: user.id, username: user.username, loggedIn: 1 });
 
             req.session.user = user;
-            res.redirect('/chat');
+            res.redirect('/');
           });
         } else {
           res.view('home/index', { error: 'Invalid password', user: false });
