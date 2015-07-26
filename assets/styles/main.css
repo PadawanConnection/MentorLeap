@@ -626,12 +626,12 @@ body {
   padding-right: 20px;
   padding-left: 20px;
 }
-.nav-sidebar > .active > a,
+/*.nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #fff;
   background-color: #428bca !important;
-}
+}*/
 
 
 /*
@@ -655,11 +655,11 @@ body {
     height: 100vw;
     top: 0px;
     padding-top: 52px;
-}
+/*}
 .nav>li:hover {
     background-color: #999999;
     color: #ffffff;
-}
+}*/
 
 
 

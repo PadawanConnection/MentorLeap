@@ -81,12 +81,15 @@
     username = registerForm.find("input[name=username]"),
     password = registerForm.find("input[name=password]"),
     passwordConfirm = registerForm.find("input[name=passwordConfirm]");
-    // firstname = registerForm.find("input[name=firstname]"),
-    // lastname = registerForm.find("input[name=lastname]"),
-    // title = registerForm.find("input[name=title]"),
-    // company = registerForm.find("input[name=company]"),
-    // city = registerForm.find("input[name=city]"),
-    // state = registerForm.find("input[name=state]");
+    firstname = registerForm.find("input[name=firstname]"),
+    lastname = registerForm.find("input[name=lastname]"),
+    title = registerForm.find("input[name=title]"),
+    company = registerForm.find("input[name=company]"),
+    city = registerForm.find("input[name=city]"),
+    state = registerForm.find("input[name=state]"),
+    state = registerForm.find("input[name=state]"),
+    state = registerForm.find("input[name=state]"),
+    mentor = registerForm.find("input[name=mentor]");
 
   errorDiv.hide();
   successDiv.hide();
@@ -110,7 +113,25 @@
   var register = function (username, password) {
     $.post('/user', {
       username: username,
-      password: password
+      password: password,
+      firstname: firstname,
+      lastname: lastname,
+      title: title,
+      company: company,
+      city: city,
+      state: state,
+      email: email,
+      bio:
+      workHistory:
+      jobTitle:
+      years:
+     },
+     summary:
+     // what type of mentor is the mentor?  
+     expertise:{     
+      type:'string'
+     }
+
     }).success(function (data) {
       successDiv.html("<p>Successfully create user " + data.username + ". You may log in now.</p>");
       successDiv.slideDown();
@@ -124,13 +145,13 @@
   //  var registerMen = function (username, password, firstname, lastname, title, company, city, state) {
   //   $.post('/regmentor', {
   //     username: username,
-  //     password: password,
-  //     firstname: firstname,
-  //     lastname: lastname,
-  //     title: title,
-  //     company: company,
-  //     city: city,
-  //     state: state
+      // password: password,
+      // firstname: firstname,
+      // lastname: lastname,
+      // title: title,
+      // company: company,
+      // city: city,
+      // state: state
   //   }).success(function (data) {
   //     successDiv.html("<p>Successfully created Mentor " + data.username + ". You may log in now.</p>");
   //     successDiv.slideDown();
