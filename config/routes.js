@@ -46,8 +46,6 @@ module.exports.routes = {
 
   'get /logout': 'MainController.logout',
 
-  'get /video': 'VideoController.main',
-
   '/register': {
     view: 'home/register'
   },
@@ -66,6 +64,10 @@ module.exports.routes = {
 
   '/videoSuccess': {
     view: 'home/videoSuccess'
+  },
+
+  '/video': {
+    view: 'user/youtubeUpload'
   },
 
   // '/video': {
