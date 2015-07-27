@@ -733,3 +733,8 @@ li.mentorBoxList {
     min-height: 50vw;
     border: 1px solid #666;
 }
+
+.jumbotron.header {
+    background-image: url("http://www.istockphoto.com/image-zoom/14458191/3/380/253/zoom-14458191-3.jpg");
+    /*background-color: #444;*/
+}
