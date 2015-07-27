@@ -70,10 +70,6 @@ module.exports.routes = {
     view: 'user/youtubeUpload'
   },
 
-  // '/video': {
-  //  view: 'user/youtubeUpload'
-  // },
-
   '/mentorReg': {
     view: 'home/mentorreg'
   },
