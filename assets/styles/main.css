@@ -55,6 +55,11 @@ font-size: 1.4em;
   border-top: 1px solid #eee;
 }
 
+#youtube {
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+
 /*#message-entry input {*/
 /*  width: 100%;*/
 /*}*/
