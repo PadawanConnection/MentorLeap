@@ -734,17 +734,24 @@ li.mentorBoxList {
     border: 1px solid #666;
 }
 
-.jumbotron.header {
+/*.jumbotron.header {
     background-image: url("/images/head.jpg");
     height: 500px;
     width: 150%;
     margin-left: -25%;
     background-size: cover;
     background-position: 0px -90px;
-}
+}*/
 
 img.img-responsive {
     border-radius: 220px;
     width: 70%;
     margin: auto;
+}
+
+.navbar-brand>img {
+    display: block;
+    height: 51px;
+    margin-bottom: 55px;
+    margin: -17px;
 }
