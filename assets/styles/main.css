@@ -763,3 +763,8 @@ img.img-responsive {
     padding: 157px;
     margin-top: -55px;
 }
+
+.container.regContainer {
+    height: 70vh;
+}
+
