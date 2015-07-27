@@ -76,6 +76,10 @@ module.exports.routes = {
 
 '/userdash': {
     view: 'user/userDash'
+  },
+
+  '/user':{
+    view: 'home/index'
   }
 
 
