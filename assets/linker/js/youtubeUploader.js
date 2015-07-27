@@ -13,8 +13,8 @@
   var player;
   function onYouTubeIframeAPIReady() {
     widget = new YT.UploadWidget('widget', {
-      width: 1000,
-      height: 650,
+      width: 850,
+      height: 500,
       events: {
         'onUploadSuccess': onUploadSuccess,
         'onProcessingComplete': onProcessingComplete
