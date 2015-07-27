@@ -830,3 +830,8 @@ span.card-title {
   background-color: #E6E6E6;
   /*content: "Space Reserved";*/
 }
+
+img.headerLogo {
+    margin-left: 35%;
+    width: 30%;
+}
