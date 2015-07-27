@@ -736,5 +736,15 @@ li.mentorBoxList {
 
 .jumbotron.header {
     background-image: url("/images/head.jpg");
-    /*background-color: #444;*/
+    height: 500px;
+    width: 150%;
+    margin-left: -25%;
+    background-size: cover;
+    background-position: 0px -90px;
+}
+
+img.img-responsive {
+    border-radius: 220px;
+    width: 70%;
+    margin: auto;
 }
