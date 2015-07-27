@@ -28,9 +28,16 @@ module.exports = {
         console.log(err);
         // have to notify the user somehow
         }
+      user.loggedIn = 1;
+      user.save(function (err) {
+        if (err) res.view('home/index', { error: 'error creating user', user: false });
+
+        User.publishUpdate(user.id, { id: user.id, username: user.username, loggedIn: 1 });
+        req.session.user = user;
         return res.view('user/userDash.ejs', { user: user, error: false });
+      });
     });
    },
 
-  _config: {},
+  _config: {}
 };
