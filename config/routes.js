@@ -80,6 +80,10 @@ module.exports.routes = {
 
 '/userdash': {
     view: 'user/userDash'
+  },
+
+  '/user':{
+    view: '/user/index'
   }
 
 

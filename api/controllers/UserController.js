@@ -38,6 +38,13 @@ module.exports = {
       });
     });
    },
-
+   index: function(req,res,next){ 
+    User.find(function foundUsers(err, users){
+      if (err) return next(err);
+      return res.view('user/index',{
+        users: users  //array of users sent as obj
+      });
+    });
+  },
   _config: {}
 };
