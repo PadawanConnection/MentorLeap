@@ -708,7 +708,7 @@ button.btn.btn-clean.btn-round-lg.btn-lg.btn-card {
 
 .col-sm-12.box {
     border-top: 1px solid #C3C3C3;
-    width: 113%;
+    width: 108%;
     margin-left: -15px;
     padding-top: 10px;
 }
@@ -721,6 +721,15 @@ ul.mentorBox {
 }
 
 li.mentorBoxList:first-child {
-    border-right: 2px solid #D0D0D0;
-    padding-right: 50px;
+    /*border-right: 2px solid #D0D0D0;*/
+    padding-right: 90px;
+}
+
+li.mentorBoxList {
+    display: inline;
+}
+
+.cal {
+    min-height: 50vw;
+    border: 1px solid #666;
 }

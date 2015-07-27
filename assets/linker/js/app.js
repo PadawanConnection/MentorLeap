@@ -115,6 +115,7 @@
       successDiv.html("<p>Successfully create user " + data.username + ". You may log in now.</p>");
       successDiv.slideDown();
       console.log(data);
+      res.redirect('/');
     }).fail(function (data) {
       errorDiv.html("<p>Error creating user.</p>");
       errorDiv.slideDown();
