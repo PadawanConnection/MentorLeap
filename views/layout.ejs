@@ -187,8 +187,8 @@
             }
           ],
           dayClick: function() {
-            $(this).toggle(css('booked'));
-            $(this).css('Booked!');
+            $(this).toggleClass('booked');
+            $(this).html(' Space Reserved');
             console.log($(this))
             }
         });
