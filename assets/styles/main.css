@@ -768,3 +768,9 @@ img.img-responsive {
     height: 70vh;
 }
 
+
+
+
+h2.text-center.bold {
+    font-weight: 700;
+}
