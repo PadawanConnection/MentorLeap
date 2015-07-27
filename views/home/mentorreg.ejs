@@ -17,7 +17,7 @@
   <h3 class="col-sm-8 col-sm-offset-2">Log In Information</h3>
   <div class="col-sm-6 col-sm-offset-3">
 
-                <form role="form" action="/regmentor" method="post" data-example-id="simple-input-groups">
+                <form role="form" action="/user" method="post" data-example-id="simple-input-groups">
                 <div class="form-group">
                   <input class="form-control"
                     name="username"
@@ -62,8 +62,8 @@
           type="text"
           placeholder="Last name" aria-describedby="basic-addon2"/>
     </div>
-
-<div class="form-group input-group"> 
+<!-- repetitive, but should we put them here or work section i vote for work -->
+<!-- <div class="form-group input-group"> 
     <span class="input-group-addon" id="basic-addon3">Title</span>
         <input id="title" class="form-control"
           name="title"
@@ -77,7 +77,7 @@
           name="company"
           type="text"
           placeholder="Company" aria-describedby="basic-addon4"/>
-    </div>
+    </div> -->
     
 <div class="form-group input-group"> 
     <span class="input-group-addon" id="basic-addon5">City</span>
@@ -154,12 +154,33 @@
 <div class="row">
 <h3 class="col-sm-8 col-sm-offset-2">Current Work Position</h3>
   <div class="col-sm-6 col-sm-offset-3">
-    <ul>
-      <li>Current Title: Text-input</li>
-      <li>Current Company: Text-input</li>
-      <li>Years Worked: Text-input</li>
-      <li>Perosonal Summary: Text-field</li>
-    </ul> 
+    <div class="form-group input-group"> 
+    <span class="input-group-addon" id="basic-addon7">Title:</span>
+        <input id="title" class="form-control"
+          name="title"
+          type="text"
+          placeholder="Current Title" aria-describedby="basic-addon7"/>
+    </div>
+    <div class="form-group input-group"> 
+    <span class="input-group-addon" id="basic-addon8">Company:</span>
+        <input id="company" class="form-control"
+          name="company"
+          type="text"
+          placeholder="Company" aria-describedby="basic-addon8"/>
+    </div>
+    <div class="form-group input-group"> 
+    <span class="input-group-addon" id="basic-addon9">Years Worked:</span>
+        <input id="yearsworked" class="form-control"
+          name="yearsworked"
+          type="text"
+          placeholder="#" aria-describedby="basic-addon9"/>
+    </div>
+    <div class="form-group input-group"> 
+    <span class="input-group-addon" id="basic-addon10">Personal Summary:</span>
+        <textarea class="form-control" namerows="4" 
+         name='personalsummary' type='text' placeholder='Personal Summary'
+         aria-describedby='basic-addon10'>
+        </textarea>
   </div>
 </div>
 
@@ -167,13 +188,30 @@
 <div class="row">
 <h3 class="col-sm-8 col-sm-offset-2">Work History</h3>
   <div class="col-sm-6 col-sm-offset-3">
-    <ul>
-      <li>Title: Text-input</li>
-      <li>Company: Text-input</li>
-      <li>Years Worked: Text-input</li>
-      <!-- <li>Perosonal Summary: Text-field</li> -->
-    </ul>
-  <h4>Add another box!</h4>
+    <div class="form-group input-group"> 
+    <span class="input-group-addon" id="basic-addon11">Title:</span>
+        <input id="oldtitle" class="form-control"
+          name="oldtitle"
+          type="text"
+          placeholder="Former Title" aria-describedby="basic-addon11"/>
+    </div>
+    <div class="form-group input-group"> 
+    <span class="input-group-addon" id="basic-addon12">Company:</span>
+        <input id="oldcompany" class="form-control"
+          name="oldcompany"
+          type="text"
+          placeholder="Former Company" aria-describedby="basic-addon12"/>
+    </div>
+    <div class="form-group input-group"> 
+    <span class="input-group-addon" id="basic-addon13">Years Worked:</span>
+        <input id="oldyearsworked" class="form-control"
+          name="oldyearsworked"
+          type="text"
+          placeholder="#" aria-describedby="basic-addon13"/>
+    </div>
+</div>
+  <input type="hidden" name="mentor" value='true'/>
+  <!-- dirty but it will work -->
 
   </div>
 </div>
@@ -188,11 +226,11 @@
 </div>
 
 <!-- STEP 2 -->
-<div class="row">
+<!-- <div class="row">
 <h3 class="col-sm-8 col-sm-offset-2">Thank You Section</h3>
   <div class="col-sm-6 col-sm-offset-3">
     
   </div>
-</div>
+</div> -->
 
 </div> <!-- BELONGS TO CONTAINER -->
