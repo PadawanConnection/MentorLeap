@@ -60,6 +60,16 @@ font-size: 1.4em;
   padding-bottom: 30px;
 }
 
+#videoForm {
+  display: none;
+  padding: 45px 0px 0px 60px;
+  text-align: center;
+}
+
+#videoForm p{
+  text-align: center;
+}
+
 /*#message-entry input {*/
 /*  width: 100%;*/
 /*}*/
