@@ -13,6 +13,28 @@ text-align: center;
 font-size: 1.4em;
 }
 
+.card-title {
+  text-align: center;
+}
+
+.card-action {
+  text-align: center;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+}
+
+#smallImg {
+  width: 75%;
+  margin-left: 20px;
+
+}
+
 #messages {
   border-bottom: 1px solid #eee;
   margin-bottom: 10px;
@@ -822,7 +844,6 @@ img.img-responsive.noRound {
 }
 
 span.card-title {
-    margin-left: 60px;
     padding-top: 20px;
 }
 
